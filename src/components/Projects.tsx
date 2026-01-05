@@ -1,47 +1,49 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Folder } from "lucide-react";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  liveUrl?: string;
+}
+
+const projects: Project[] = [
   {
     title: "avd-assets",
     description: "Asset management system built with Flutter. Tracks organization resources with authentication and product lifecycle management.",
     tech: ["Dart", "Flutter", "Mobile"],
-    link: "https://github.com/Parth369000/avd-assets",
     github: "https://github.com/Parth369000/avd-assets"
   },
   {
     title: "tuition",
     description: "Multi-role tuition management platform. Role-based access for Admins, Teachers, and Students requiring complex backend logic.",
     tech: ["Dart", "Flutter", "PostgreSQL"],
-    link: "https://github.com/Parth369000/tuition",
     github: "https://github.com/Parth369000/tuition"
   },
   {
     title: "jookebox_task",
     description: "Specialized reminder application focusing on local notifications and chime scheduling functionality.",
     tech: ["C++", "Dart", "Notification"],
-    link: "https://github.com/Parth369000/jookebox_task",
     github: "https://github.com/Parth369000/jookebox_task"
   },
   {
     title: "Event_Management",
     description: "Comprehensive event planning solution. Backend repository for managing event logistics and data.",
     tech: ["Backend", "Database", "API"],
-    link: "https://github.com/Parth369000/Event_Management",
     github: "https://github.com/Parth369000/Event_Management"
   },
   {
     title: "decoration_backend",
     description: "Backend services powering a decoration business platform. Handles data persistence and business logic.",
     tech: ["Backend", "Services", "Logic"],
-    link: "https://github.com/Parth369000/decoration_backend",
     github: "https://github.com/Parth369000/decoration_backend"
   },
   {
     title: "Parth369000",
     description: "My personal configuration repository. Contains profile metadata and special README configuration.",
     tech: ["Config", "Markdown", "Git"],
-    link: "https://github.com/Parth369000/Parth369000",
     github: "https://github.com/Parth369000/Parth369000"
   }
 ];
@@ -112,9 +114,11 @@ const Projects = () => {
                 <a href={project.github} className="flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors">
                   <Github className="w-4 h-4" /> Code
                 </a>
-                <a href={project.link} className="flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors">
-                  <ExternalLink className="w-4 h-4" /> Live_View
-                </a>
+                {project.liveUrl && (
+                  <a href={project.liveUrl} className="flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors">
+                    <ExternalLink className="w-4 h-4" /> Live_View
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
