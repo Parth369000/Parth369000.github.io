@@ -50,11 +50,31 @@ const Projects = () => {
   return (
     <section className="py-20 bg-background/50 relative" id="projects">
       <div className="section-container">
-        <div className="flex items-center gap-4 mb-12">
+        <div className="flex items-center gap-4 mb-8">
           <h2 className="text-3xl md:text-5xl font-bold font-mono">
             <span className="text-primary">&gt;</span> Executed_Protocols
           </h2>
           <div className="h-px flex-1 bg-border/50" />
+        </div>
+
+        {/* Project Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          <div className="p-4 bg-card/30 border border-primary/20 rounded-lg text-center backdrop-blur-sm">
+            <h4 className="text-4xl font-bold text-primary mb-1">7+</h4>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider">Total Projects</p>
+          </div>
+          <div className="p-4 bg-card/30 border border-primary/20 rounded-lg text-center backdrop-blur-sm">
+            <h4 className="text-4xl font-bold text-primary mb-1">3</h4>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider">Live Production</p>
+          </div>
+          <div className="p-4 bg-card/30 border border-primary/20 rounded-lg text-center backdrop-blur-sm">
+            <h4 className="text-4xl font-bold text-primary mb-1">5+</h4>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider">From Scratch</p>
+          </div>
+          <div className="p-4 bg-card/30 border border-primary/20 rounded-lg text-center backdrop-blur-sm">
+            <h4 className="text-4xl font-bold text-primary mb-1">Flutter</h4>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider">Primary Focus</p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

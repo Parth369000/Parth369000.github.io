@@ -46,7 +46,7 @@ const Contact = () => {
               <span>/linkedin</span>
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:pparth18122003@gmail.com"
               className="flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded font-mono transition-all w-full md:w-auto text-center justify-center font-bold"
             >
               <Mail className="w-5 h-5" />

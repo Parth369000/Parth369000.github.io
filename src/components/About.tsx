@@ -52,20 +52,14 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I'm a dedicated Flutter Developer with over 1.5 years of hands-on experience 
-                building production-ready mobile applications. My focus lies in creating 
-                high-quality, performant apps with clean code and intuitive user experiences.
+                I’m currently pursuing my MCA while working as a Flutter Developer Intern at eDigillence Infosolutions. Over the last 1.5+ years, I’ve built multiple applications from scratch and contributed to live production projects.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I specialize in implementing complex UI designs with pixel-perfect accuracy, 
-                integrating RESTful APIs, and utilizing modern state management solutions. 
-                My experience includes working with Firebase, optimizing app performance, 
-                and following clean architecture principles.
+                My core focus is Flutter development with clean architecture, structured codebases, and smooth UI experiences. I regularly work with state management using GetX, API integration, Firebase services, and performance optimization techniques. I enjoy solving UI and logic bugs and refining apps until they feel reliable and polished.
               </p>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4 font-display">What I'm Looking For</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm passionate about staying current with the latest Flutter developments 
-                and best practices, constantly improving my skills to deliver exceptional 
-                mobile experiences.
+                I’m looking for opportunities where I can work on real products, improve app architecture, and build scalable Flutter applications while learning from experienced developers. I aim to grow by tackling complex challenges and collaborating with teams that value code quality.
               </p>
             </div>
 

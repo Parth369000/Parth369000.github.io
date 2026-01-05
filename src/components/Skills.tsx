@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React / Next.js", level: 90, type: "Frontend" },
-  { name: "Flutter / Dart", level: 85, type: "Mobile" },
-  { name: "TypeScript", level: 88, type: "Language" },
-  { name: "Tailwind CSS", level: 95, type: "Design" },
-  { name: "Node.js", level: 75, type: "Backend" },
-  { name: "Git / CI/CD", level: 80, type: "DevOps" },
+  { name: "Flutter / Dart", level: 95, type: "Mobile" },
+  { name: "GetX State Management", level: 90, type: "State" },
+  { name: "Node.js / APIs", level: 75, type: "Backend" },
+  { name: "Firebase / Supabase", level: 80, type: "Cloud" },
+  { name: "PostgreSQL / SQL", level: 70, type: "Database" },
+  { name: "Git / GitHub", level: 85, type: "Tools" },
 ];
 
 const Skills = () => {
@@ -33,7 +33,7 @@ const Skills = () => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* About Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -91,6 +91,24 @@ const Skills = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+
+        {/* Detailed Tech Stack */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            { title: "Mobile", tools: "Flutter, Dart" },
+            { title: "State Management", tools: "GetX" },
+            { title: "Backend", tools: "Node.js, REST APIs, Firebase, Supabase" },
+            { title: "Databases", tools: "PostgreSQL, MySQL, MongoDB" },
+            { title: "Tools", tools: "Git, GitHub, Postman, Google Maps API" },
+            { title: "Architecture", tools: "Clean Architecture, MVVM" },
+            { title: "Focus", tools: "Performance, UI/UX" }
+          ].map((item, idx) => (
+            <div key={idx} className="bg-card/20 p-4 rounded border border-border/50">
+              <h4 className="text-primary font-mono text-sm mb-2">{item.title}</h4>
+              <p className="text-muted-foreground text-sm">{item.tools}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

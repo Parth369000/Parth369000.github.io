@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   const [text, setText] = useState("");
-  const fullText = "Hello World, I am Parth.";
+  const fullText = "Parth Prajapati";
   const [showSubtitle, setShowSubtitle] = useState(false);
 
   useEffect(() => {
@@ -31,16 +31,16 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-6 inline-block px-3 py-1 border border-primary/30 rounded-full bg-primary/5 backdrop-blur-sm"
+          className="mb-6 inline-block px-4 py-1.5 border border-primary/20 rounded-full bg-primary/5 backdrop-blur-sm"
         >
-          <span className="text-primary font-mono text-xs tracking-wider uppercase">
-            System Online
+          <span className="text-primary font-mono text-sm tracking-wide">
+            Welcome to my portfolio
           </span>
         </motion.div>
 
-        <h1 className="text-4xl md:text-7xl font-bold font-mono tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-tech-300 to-accent h-[1.2em]">
+        <h1 className="text-4xl md:text-7xl font-bold font-mono tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-400 to-accent h-[1.2em]">
           {text}
-          <span className="animate-pulse text-primary">_</span>
+          <span className="animate-pulse text-primary">|</span>
         </h1>
 
         <motion.div
@@ -51,7 +51,7 @@ const Hero = () => {
         >
           <p className="text-lg md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
             <span className="text-primary font-mono">&lt;Flutter_Developer&gt;</span>{" "}
-            Building cross-platform digital experiences with precision and creativity.{" "}
+            I build clean, scalable, and high-performance mobile applications.
             <span className="text-primary font-mono">&lt;/Flutter_Developer&gt;</span>
           </p>
 

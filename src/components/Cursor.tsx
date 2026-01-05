@@ -31,33 +31,28 @@ const Cursor = () => {
     return (
         <>
             {/* Main Cursor Dot - Diamond Shape */}
+            {/* Main Cursor Dot */}
             <motion.div
-                className="fixed top-0 left-0 w-3 h-3 bg-primary rotate-45 z-50 pointer-events-none mix-blend-difference"
+                className="fixed top-0 left-0 w-3 h-3 bg-primary rounded-full z-[100] pointer-events-none mix-blend-difference"
                 animate={{
                     x: position.x - 6,
                     y: position.y - 6,
-                    scale: isHovering ? 1.5 : 1,
+                    scale: isHovering ? 2 : 1,
                 }}
                 transition={{ type: "tween", ease: "backOut", duration: 0.1 }}
             />
 
-            {/* Outer Reticle - Rotating Crosshair */}
+            {/* Trailing Ring */}
             <motion.div
-                className="fixed top-0 left-0 w-10 h-10 border border-primary/50 z-50 pointer-events-none mix-blend-difference flex items-center justify-center"
-                style={{ borderRadius: "20%" }}
+                className="fixed top-0 left-0 w-8 h-8 border border-primary z-[99] pointer-events-none mix-blend-difference rounded-full"
                 animate={{
-                    x: position.x - 20,
-                    y: position.y - 20,
-                    scale: isHovering ? 1.8 : 1,
-                    rotate: isHovering ? 90 : 0,
-                    borderColor: isHovering ? "hsl(var(--primary))" : "hsla(var(--primary), 0.3)",
+                    x: position.x - 16,
+                    y: position.y - 16,
+                    scale: isHovering ? 1.5 : 1,
+                    opacity: isHovering ? 0.5 : 1,
                 }}
-                transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-            >
-                {/* Crosshair lines */}
-                <div className="absolute w-full h-[1px] bg-primary/30" />
-                <div className="absolute h-full w-[1px] bg-primary/30" />
-            </motion.div>
+                transition={{ type: "spring", stiffness: 100, damping: 20, mass: 0.5 }}
+            />
         </>
     );
 };
