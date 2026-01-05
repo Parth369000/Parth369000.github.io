@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         sans: ["DM Sans", "system-ui", "sans-serif"],
         display: ["Space Grotesk", "system-ui", "sans-serif"],
+        mono: ["Fira Code", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,6 +51,20 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        tech: {
+          100: "#E0F2F1",
+          200: "#B2DFDB",
+          300: "#80CBC4",
+          400: "#4DB6AC",
+          500: "#26A69A",
+          600: "#009688",
+          700: "#00897B",
+          800: "#00796B",
+          900: "#004D40",
+          neon: "#00ff9d",
+          blue: "#00d2ff",
+          purple: "#bf00ff",
         },
       },
       borderRadius: {
