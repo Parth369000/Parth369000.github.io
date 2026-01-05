@@ -15,7 +15,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <Cursor />
-      <BrowserRouter>
+      <BrowserRouter basename="/flutter-forge/">
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
